@@ -9,7 +9,6 @@ class Header extends Component {
     <nav>
       <ul>
        <li className='name'>Tameka J. Alston</li>
-        <li>HOME</li>
         <li><Link to='./About'>ABOUT</Link></li>
         <li>SKILLS</li>
         <li>PORTFOLIO</li>

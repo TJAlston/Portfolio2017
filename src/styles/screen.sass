@@ -3,6 +3,18 @@
 $base-text-size: 16px
 $base-font-family: sans-serif
 
+
+@keyframes slideInBottom
+  from
+    display: none
+    opacity: 0
+    transform: translate3d(0, 100%, 0)
+    visibility: visible
+  to
+    display: block
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
 html
   text-size-adjust: 100%
 
@@ -10,3 +22,157 @@ body
   @include font-smoothing(on)
   margin: 0
   font: $base-text-size / 1 $base-font-family
+
+$purple: #9D7092
+$coral: #E38A87
+$maroon: #56293A
+$tan: #FACFA9
+$orange: #F18254
+$main-font: 'HaloHandletter'
+
+h1
+  font-family: $main-font
+  font-size: 100px
+  margin-bottom: 0
+
+h2
+  text-transform: uppercase
+  font-weight: lighter
+  margin: 0
+
+h3
+  color: $orange
+  font-size: 50px
+  font-family: $main-font
+
+h4
+  color: $maroon
+  font-size: 50px
+  font-family: $main-font
+
+main
+  padding: 0
+  display: flex
+  justify-content: center
+  flex-direction: column
+
+nav
+  margin: 0
+  height: 100px
+  background-color: $coral
+  align-content: center
+  display: flex
+  flex-direction: row
+  width: 100%
+  position: fixed top
+
+.name
+  width: 150px
+  margin-right: 350px
+  font-size: 30px
+  font-family: $main-font
+
+ul
+  display: flex
+  flex-direction: row
+  list-style: none
+  color: white
+  font-weight: bold
+  justify-content: space-between
+  width: 100%
+  margin-top: 50px
+  padding-right: 25px
+  font-size: .75em
+
+li
+  justify-content: flex-end
+
+//HOME PAGE
+.home
+  background-image: url('http://www.wallhd4.com/wp-content/uploads/2015/08/widescreen-and-beautiful-photography-14.jpeg')
+  background-size: cover
+  background-attachment: fixed
+
+.intro
+  color: white
+  text-align: center
+  margin: 100px
+  padding: 0px 20px 0px 20px
+  border: 3px double white
+  margin-top: 200px
+  height: 600px
+  background-color: rgba($maroon, 0.50)
+
+.Headshot
+  background-image: url('../images/Headshot.jpg')
+  background-size: cover
+  border-radius: 130px
+  margin-top: -150px
+  height: 250px
+  width: 250px
+  margin-bottom: -60px
+
+#about
+  background-color: rgba($tan, 0.90)
+  height: 250px
+  padding: 25px 125px 50px 125px
+  animation-name: slideInBottom
+  animation-duration: 3s
+  text-align: center
+
+#skills
+  background-color: rgba($purple, 0.90)
+  height: 250px
+  padding: 25px 125px 50px 125px
+  animation-name: slideInBottom
+  animation-duration: 3s
+  text-align: center
+  border-top: 5px double white
+  border-bottom: 5px double white
+
+#portfolio
+  background-color: rgba($coral, 0.90)
+  height: 750px
+  padding: 25px 125px 50px 125px
+  animation-name: slideInBottom
+  animation-duration: 3s
+  text-align: center
+
+@mixin bgImage
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  height: 250px
+  width: 300px
+  border: 3px double white
+  margin-bottom: 30px
+
+.row1
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+
+.onePiece
+  background-image: url('../images/luffy.png')
+  @include bgImage
+
+.BBCNews
+  background-image: url('../images/BBCNews.png')
+  @include bgImage
+
+.dexter
+  background-image: url('../images/DexterMemory.png')
+  @include bgImage
+
+.marvel
+  background-image: url('../images/marvel.png')
+  @include bgImage
+
+.oneList
+  background-image: url('../images/onelist.png')
+  @include bgImage
+
+.bomb
+  background-image: url('../images/bombsniffer.png')
+  @include bgImage
