@@ -6,15 +6,16 @@ class Skills extends Component {
     return <div id='skills'>
     <h3>Skills</h3>
     <ul className='skillList'>
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript</li>
-      <li>React.js</li>
-      <li>NPM</li>
-      <li>GIT</li>
-      <li>Adobe Illustrator</li>
-      <li>Adobe Photoshop</li>
-      <li>Adobe InDesign</li>
+      <div className='html' />
+      <div className='css' />
+      <div className='javascript' />
+      <div className='sass' />
+      <div className='ai' />
+      <div className='ps' />
+      <div className='br' />
+      <div className='id' />
+      <div className='npm' />
+      <div className='git' />
     </ul>
     </div>
   }

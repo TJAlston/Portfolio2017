@@ -15,6 +15,19 @@ $base-font-family: sans-serif
     opacity: 1
     transform: translate3d(0, 0, 0)
 
+@keyframes bounce
+  from, 20%, 53%, 80%, to
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
+    transform: translate3d(0,0,0)
+  40%, 43%
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060)
+    transform: translate3d(0, -30px, 0)
+  70%
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060)
+    transform: translate3d(0, -15px, 0)
+  90%
+    transform: translate3d(0,-4px,0)
+
 html
   text-size-adjust: 100%
 
@@ -96,10 +109,9 @@ li
 .intro
   color: white
   text-align: center
-  margin: 100px
+  margin: 200px 100px 25px 100px
   padding: 0px 20px 0px 20px
   border: 3px double white
-  margin-top: 200px
   height: 600px
   background-color: rgba($maroon, 0.50)
 
@@ -111,21 +123,22 @@ li
   height: 250px
   width: 250px
   margin-bottom: -60px
+  border: 2px solid white
 
 #about
   background-color: rgba($tan, 0.90)
   height: 250px
   padding: 25px 125px 50px 125px
-  animation-name: slideInBottom
-  animation-duration: 3s
+  // animation-name: slideInBottom
+  // animation-duration: 3s
   text-align: center
 
 #skills
   background-color: rgba($purple, 0.90)
   height: 250px
   padding: 25px 125px 50px 125px
-  animation-name: slideInBottom
-  animation-duration: 3s
+  // animation-name: slideInBottom
+  // animation-duration: 3s
   text-align: center
   border-top: 5px double white
   border-bottom: 5px double white
@@ -134,8 +147,8 @@ li
   background-color: rgba($coral, 0.90)
   height: 750px
   padding: 25px 125px 50px 125px
-  animation-name: slideInBottom
-  animation-duration: 3s
+  // animation-name: slideInBottom
+  // animation-duration: 3s
   text-align: center
 
 @mixin bgImage
@@ -176,3 +189,85 @@ li
 .bomb
   background-image: url('../images/bombsniffer.png')
   @include bgImage
+
+@mixin logoSize
+  height: 60px
+  width: 60px
+  background-size: cover
+
+@mixin aniBounce
+  animation-name: bounce
+  transform-origin: center bottom
+  animation-duration: 1s
+
+.html
+  background-image: url('../images/html.png')
+  @include logoSize
+.html:hover
+  @include aniBounce
+
+.css
+  background-image: url('../images/css3.png')
+  @include logoSize
+.css:hover
+  @include aniBounce
+
+.javascript
+  background-image: url('../images/js_1.png')
+  height: 80px
+  width: 57px
+  background-size: contain
+  background-repeat: no-repeat
+.javascript:hover
+  @include aniBounce
+
+.ai
+  background-image: url('../images/ai3d.png')
+  @include logoSize
+.ai:hover
+  @include aniBounce
+
+.ps
+  background-image: url('../images/photoshop3d.png')
+  @include logoSize
+.ps:hover
+  @include aniBounce
+
+.br
+  background-image: url('../images/bridge3d.png')
+  @include logoSize
+.br:hover
+  @include aniBounce
+
+.id
+  background-image: url('../images/InDesign3d.png')
+  @include logoSize
+.id:hover
+  @include aniBounce
+
+.sass
+  background-image: url('../images/sass.png')
+  @include logoSize
+.sass:hover
+  @include aniBounce
+
+.contactFont
+  color: white
+  text-align: center
+  margin: 20px 100px 20px 100px
+  padding: 0px 20px 0px 20px
+  border: 3px double white
+  height: 500px
+  background-color: rgba($maroon, 0.50)
+  font-family: helvetica
+  font-size: 25px
+
+button
+  height: 50px
+  width: 200px
+  color: white
+  font-weight: bolder
+  font-size: 20px
+  border-radius: 20px
+  background-color: rgba(#5A6992, 0.75)
+  border: 1px solid white
