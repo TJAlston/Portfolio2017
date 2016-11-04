@@ -60,7 +60,7 @@ h3
   font-size: 50px
   font-family: $main-font
   margin: 0px
-  padding: 10px 0px 25px 0px
+  padding: 10px 0px 50px 0px
 
 h4
   color: $maroon
@@ -87,6 +87,12 @@ a:visited
 
 a:active
   color: $coral
+
+.header
+  position: fixed
+  top: 0px
+  width: 100%
+  border-bottom: 1px solid white
 
 nav
   margin: 0
@@ -128,7 +134,7 @@ li
 .intro
   color: white
   text-align: center
-  margin: 200px 100px 25px 100px
+  margin: 300px 100px 25px 100px
   padding: 0px 20px 0px 20px
   border: 3px double white
   height: 600px
@@ -147,28 +153,25 @@ li
 #about
   background-color: rgba($tan, 0.90)
   height: 250px
-  padding: 25px 125px 50px 125px
-  // animation-name: slideInBottom
-  // animation-duration: 3s
+  padding: 125px 125px 50px 125px
   text-align: center
 
 #skills
   background-color: rgba($purple, 0.90)
   height: 250px
-  padding: 25px 125px 50px 125px
-  // animation-name: slideInBottom
-  // animation-duration: 3s
+  padding: 125px 125px 50px 125px
   text-align: center
   border-top: 5px double white
   border-bottom: 5px double white
 
 #portfolio
   background-color: rgba($coral, 0.90)
-  height: 750px
-  padding: 25px 125px 50px 125px
-  // animation-name: slideInBottom
-  // animation-duration: 3s
+  height: 650px
+  padding: 125px 125px 50px 125px
   text-align: center
+
+#contact
+  margin: 200px 0px 100px 0px
 
 @mixin bgImage
   background-size: cover
