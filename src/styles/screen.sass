@@ -1,5 +1,7 @@
 @import 'utility'
 
+@import '../styles/tablet.sass'
+
 $base-text-size: 16px
 $base-font-family: sans-serif
 
@@ -57,17 +59,34 @@ h3
   color: $orange
   font-size: 50px
   font-family: $main-font
+  margin: 0px
+  padding: 10px 0px 25px 0px
 
 h4
   color: $maroon
   font-size: 50px
   font-family: $main-font
+  margin: 0px
+  padding: 10px 0px 25px 0px
 
 main
   padding: 0
   display: flex
   justify-content: center
   flex-direction: column
+
+p
+  font-size: 1em
+
+a:link
+  color: white
+  text-decoration: none
+
+a:visited
+  color: white
+
+a:active
+  color: $coral
 
 nav
   margin: 0
@@ -101,7 +120,7 @@ li
   justify-content: flex-end
 
 //HOME PAGE
-.home
+#home
   background-image: url('http://www.wallhd4.com/wp-content/uploads/2015/08/widescreen-and-beautiful-photography-14.jpeg')
   background-size: cover
   background-attachment: fixed
@@ -190,6 +209,13 @@ li
   background-image: url('../images/bombsniffer.png')
   @include bgImage
 
+.skillList
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  padding: 0px 100px 0px 100px
+
 @mixin logoSize
   height: 60px
   width: 60px
@@ -267,7 +293,51 @@ button
   width: 200px
   color: white
   font-weight: bolder
-  font-size: 20px
+  font-size: 40px
   border-radius: 20px
-  background-color: rgba(#5A6992, 0.75)
+  background-color: rgba($coral, 0.75)
   border: 1px solid white
+  font-family: $main-font
+
+.buttons
+  margin: 80px 250px 0px 250px
+  display: flex
+  justify-content: space-between
+
+.buttonsContact
+  margin: 0px 250px 0px 250px
+  display: flex
+  justify-content: space-between
+
+.github
+  background-image: url('../images/github.png')
+  @include logoSize
+.github:hover
+  @include aniBounce
+
+.linkedin
+  background-image: url('../images/Linkedin.png')
+  @include logoSize
+.linkedin:hover
+  @include aniBounce
+
+.twitter
+  background-image: url('../images/twitter.png')
+  @include logoSize
+.twitter:hover
+  @include aniBounce
+
+.ig
+  background-image: url('../images/Instagram.png')
+  @include logoSize
+.ig:hover
+@include aniBounce
+
+
+@media (min-width:768) and (max-width:1000px)
+.buttons
+  display: flex
+  justify-content: center
+  margin: 50px 0px 0px 0px
+.intro
+÷
