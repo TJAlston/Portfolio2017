@@ -12,7 +12,7 @@ class Portfolio extends Component {
         <div className='marvel' /></a>
         <a href='http://tjonelist.surge.sh/'>
         <div className='oneList' /></a>
-        <a href='./src/images/DexterMemory.png'>
+        <a href='http://dextermemory.surge.sh/'>
         <div className='dexter' /></a>
         <a href='http://newswebsite1.surge.sh/'>
         <div className='BBCNews' /></a>
