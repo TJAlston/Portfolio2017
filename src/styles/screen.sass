@@ -1,21 +1,7 @@
 @import 'utility'
 
-@import '../styles/tablet.sass'
-
 $base-text-size: 16px
 $base-font-family: sans-serif
-
-
-@keyframes slideInBottom
-  from
-    display: none
-    opacity: 0
-    transform: translate3d(0, 100%, 0)
-    visibility: visible
-  to
-    display: block
-    opacity: 1
-    transform: translate3d(0, 0, 0)
 
 @keyframes bounce
   from, 20%, 53%, 80%, to
@@ -69,14 +55,17 @@ h4
   margin: 0px
   padding: 10px 0px 25px 0px
 
+h5
+  color: $orange
+  font-size: 20px
+  font-weight: bold
+  margin: 50px 0px 25px 0px
+
 main
   padding: 0
   display: flex
   justify-content: center
   flex-direction: column
-
-p
-  font-size: 1em
 
 a:link
   color: white
@@ -127,17 +116,17 @@ li
 
 //HOME PAGE
 #home
-  background-image: url('http://www.wallhd4.com/wp-content/uploads/2015/08/widescreen-and-beautiful-photography-14.jpeg')
+  background-image: url('../images/background.jpeg')
   background-size: cover
   background-attachment: fixed
 
 .intro
   color: white
   text-align: center
-  margin: 300px 100px 25px 100px
-  padding: 0px 20px 0px 20px
+  margin: 275px 100px 50px 100px
+  padding: 0px 150px 0px 150px
   border: 3px double white
-  height: 600px
+  height: 470px
   background-color: rgba($maroon, 0.50)
 
 .Headshot
@@ -150,11 +139,45 @@ li
   margin-bottom: -60px
   border: 2px solid white
 
+//ABOUT
+
 #about
   background-color: rgba($tan, 0.90)
-  height: 250px
-  padding: 125px 125px 50px 125px
+  height: 600px
+  padding: 125px 125px 100px 125px
   text-align: center
+
+.columns
+  display: flex
+  flex-direction: row
+  line-height: 20px
+  margin-left: 40px
+  width: 100%
+
+.education
+  display: flex
+  flex-direction: column
+  width: 600px
+  margin-right: 100px
+  font-weight: lighter
+
+.extraCir
+  display: flex
+  flex-direction: column
+  width: 600px
+  font-weight: lighter
+
+.aboutMe
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+.groups
+  display: flex
+  flex-direction: column
+  font-size: 1em
+  width: 400px
+  font-weight: lighter
 
 #skills
   background-color: rgba($purple, 0.90)
@@ -164,14 +187,56 @@ li
   border-top: 5px double white
   border-bottom: 5px double white
 
+#contact
+  margin: 200px 0px 100px 0px
+
 #portfolio
   background-color: rgba($coral, 0.90)
   height: 650px
   padding: 125px 125px 50px 125px
   text-align: center
 
-#contact
-  margin: 200px 0px 100px 0px
+//MEDIA QUERIES
+
+@media (min-width: 865px) and (max-width: 1150px)
+  .intro
+    height: 530px
+    margin: 250px 0px 0px 0px
+  #portfolio
+    height: 960px
+  #skills
+    padding: 100px 200px 0px 200px
+    height: 350px
+  #contact
+    display: flex
+    justify-content: center
+    margin: 0
+  #about
+    padding: 100px 0px 0px 0px
+  .buttonsContact
+    justify-content: center
+  .buttons
+    margin: 0
+
+@media (min-width: 641px) and (max-width: 864px)
+    nav
+      height: 200px
+    ul
+      display: flex
+      flex-direction: column
+    li
+      font-size: 20px
+    .name
+      font-size: 40px
+      width: 500px
+      margin-top: -50px
+    h1
+      font-size: 50px
+      margin: 100px
+
+//figure out landscape widths
+// @media (min-width: 320px) and (max-width: 640px)
+
 
 @mixin bgImage
   background-size: cover
@@ -303,14 +368,17 @@ button
   font-family: $main-font
 
 .buttons
-  margin: 80px 250px 0px 250px
+  margin: 20px 150px 0px 150px
   display: flex
   justify-content: space-between
 
 .buttonsContact
-  margin: 0px 250px 0px 250px
+  margin: 20px 250px 0px 250px
   display: flex
   justify-content: space-between
+
+.number
+  color: white
 
 .github
   background-image: url('../images/github.png')
@@ -335,12 +403,3 @@ button
   @include logoSize
 .ig:hover
 @include aniBounce
-
-
-@media (min-width:768) and (max-width:1000px)
-.buttons
-  display: flex
-  justify-content: center
-  margin: 50px 0px 0px 0px
-.intro
-÷

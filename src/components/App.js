@@ -17,6 +17,7 @@ class App extends Component {
           <img className='Headshot' />
           <h1>Tameka J. Alston</h1>
           <h2>Front End Web Developer</h2>
+          <p>I am a Front End Web Developer based in Tampa Florida that has experience in HTML5, CSS3 and JavaScript.  I also have Graphic Design skills in Adobe Illustrator, PhotoShop and InDesign.</p>
           <p>Creating beautiful dynamic webpages from a blank page is what I love to do! </p>
           <div className='buttons'>
             <button><HashLink to='/#portfolio'>Portfolio</HashLink></button>

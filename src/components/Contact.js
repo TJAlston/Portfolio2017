@@ -7,8 +7,8 @@ class Contact extends Component {
       <div className='contactFont'>
       <h1>Contact</h1>
       <button><a href='../src/images/TJAlston.pdf'>Resume</a></button>
-      <p>(813) 727 - 6091</p>
-      <p><a href='mailto:TJAlston82@yahoo.com'>TJAlston82@Yahoo.com</a></p>
+      <p className='number'>(813) 727 - 6091</p>
+      <a href='mailto:TJAlston82@yahoo.com'>TJAlston82@Yahoo.com</a>
         <div className='buttonsContact'>
         <a href='https://github.com/TJAlston'><div className='github' /></a>
         <a href='https://www.linkedin.com/in/tamekajalston'><div className='linkedin' /></a>
