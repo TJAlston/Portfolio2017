@@ -10,6 +10,7 @@ class Skills extends Component {
         <div className='css' />
         <div className='javascript' />
         <div className='sass' />
+        <div className='react' />
         <div className='ai' />
         <div className='ps' />
         <div className='br' />
