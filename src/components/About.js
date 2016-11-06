@@ -14,7 +14,7 @@ class About extends Component {
       <div className='extraCir'>
       <h5>Social Activities</h5>
         <p> Elite Hip-Hop Dancer for OnCue Dance</p>
-        <p> Stage Manager, Production Manager, Assistant Director and Actress for AMS Visions and Productions known for the Thearical Dance Musical <i>Saul's Juke Joint</i></p>
+        <p> Stage Manager, Production Manager, Assistant Director and Actress for AMS Visions and Productions known for the Theatrical Dance Musical <i>Saul's Juke Joint</i></p>
       </div>
       <div className='aboutMe'>
       <h5>Social Groups</h5>

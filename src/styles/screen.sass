@@ -30,10 +30,14 @@ $coral: #E38A87
 $maroon: #56293A
 $tan: #FACFA9
 $orange: #F18254
-$main-font: 'HaloHandletter'
+'HaloHandletter'
+
+@font-face
+  font-family: 'HaloHandletter'
+  src: url('../HaloHandletter.otf') format('truetype')
 
 h1
-  font-family: $main-font
+  font-family: 'HaloHandletter'
   font-size: 8vw
   width: 100%
   margin-bottom: 0
@@ -46,14 +50,14 @@ h2
 h3
   color: $orange
   font-size: 50px
-  font-family: $main-font
+  font-family: 'HaloHandletter'
   margin: 0px
   padding: 10px 0px 50px 0px
 
 h4
   color: $maroon
   font-size: 50px
-  font-family: $main-font
+  font-family: 'HaloHandletter'
   margin: 0px
   padding: 10px 0px 25px 0px
 
@@ -99,7 +103,7 @@ nav
 .name
   width: 200px
   font-size: 35px
-  font-family: $main-font
+  font-family: 'HaloHandletter'
   margin-top: -60px
   position: fixed
 
@@ -200,7 +204,7 @@ $navigation__transition: max-height 0.5s ease-in-out
 
 //HOME PAGE
 #home
-  background-image: url('../images/background.jpeg')
+  background-image: url('../images/background.jpg')
   background-size: cover
   background-attachment: fixed
 
@@ -437,7 +441,7 @@ button
   border-radius: 20px
   background-color: rgba($coral, 0.75)
   border: 1px solid white
-  font-family: $main-font
+  font-family: 'HaloHandletter'
 
 .buttons
   margin: 20px 150px 0px 150px
@@ -593,17 +597,20 @@ button
     h1
       font-size: 50px
     .intro
+      height: 100%
       width: 90%
       margin: 0
-      margin-top: 200px
+      margin-top: 30px
       padding-left: 5vw
       padding-bottom: 5vh
+      padding-top: 200px
     .intro p
       width: 100%
     .Headshot
-      width: 50vw
+      position: relative
       margin-left: 25vw
       margin-right: 25vw
+      margin-bottom: 5px
     .skillList
       justify-content: center
       padding: 0px
@@ -618,6 +625,9 @@ button
       width: 100%
       justify-content: center
       margin: 0
+      margin-top: -200px
+      margin-bottom: -100px
       padding: 10px
+      height: 100%
     .aboutMe p
       width: 100%
