@@ -10,10 +10,22 @@ class Contact extends Component {
       <p className='number'>(813) 727 - 6091</p>
       <a href='mailto:TJAlston82@yahoo.com'>TJAlston82@Yahoo.com</a>
         <div className='buttonsContact'>
-        <a href='https://github.com/TJAlston'><div className='github' /></a>
-        <a href='https://www.linkedin.com/in/tamekajalston'><div className='linkedin' /></a>
-        <a href='https://twitter.com/Mirage_Music'><div className='twitter' /></a>
-        <a href='https://www.instagram.com/tamekaj.alston/'><div className='ig' /></a>
+          <div className= 'marble'>
+            <a className='github' href='https://github.com/TJAlston' />
+            <p>Github</p>
+          </div>
+          <div className= 'marble'>
+            <a className='linkedin' href='https://www.linkedin.com/in/tamekajalston' />
+            <p>LinkedIn</p>
+          </div>
+          <div className= 'marble'>
+            <a className='twitter' href='https://twitter.com/Mirage_Music' />
+            <p>Twitter</p>
+          </div>
+          <div className= 'marble'>
+            <a className='ig' href='https://www.instagram.com/tamekaj.alston/' />
+            <p>Instagram</p>
+          </div>
         </div>
       </div>
     </div>
