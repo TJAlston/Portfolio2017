@@ -6,8 +6,7 @@ import {
   App,
   About,
   Portfolio,
-  Contact,
-  Hamburger
+  Contact
 } from './components'
 
 import './styles/screen.sass'
@@ -18,7 +17,6 @@ const router = (
       <Route path='./About' component={About} />
       <Route path='./Contact' component={Contact} />
       <Route path='./Portfolio' component={Portfolio} />
-      <Route path='./Hamburger' component={Hamburger} />
   </Router>
 )
 render(router, document.getElementById('root'))

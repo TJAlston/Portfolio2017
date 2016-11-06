@@ -23,6 +23,7 @@ body
   @include font-smoothing(on)
   margin: 0
   font: $base-text-size / 1 $base-font-family
+  overflow-x: hidden
 
 $purple: #9D7092
 $coral: #E38A87
@@ -33,7 +34,8 @@ $main-font: 'HaloHandletter'
 
 h1
   font-family: $main-font
-  font-size: 100px
+  font-size: 8vw
+  width: 100%
   margin-bottom: 0
 
 h2
@@ -67,6 +69,8 @@ main
   justify-content: center
   flex-direction: column
 
+//NAVIGATION
+
 a:link
   color: white
   text-decoration: none
@@ -85,34 +89,114 @@ a:active
 
 nav
   margin: 0
-  height: 100px
-  background-color: $coral
+  height: 200px
+  background-color: rgba($coral, 0.50)
   align-content: center
   display: flex
-  flex-direction: row
-  width: 100%
+  flex-direction: column
   position: fixed top
 
 .name
-  width: 150px
-  margin-right: 350px
-  font-size: 30px
+  width: 200px
+  font-size: 35px
   font-family: $main-font
+  margin-top: -60px
+  position: fixed
+
+.sub
+  margin-top: 20px
 
 ul
   display: flex
-  flex-direction: row
+  flex-direction: column
   list-style: none
   color: white
   font-weight: bold
   justify-content: space-between
   width: 100%
-  margin-top: 50px
   padding-right: 25px
-  font-size: .75em
+  margin:
+  font-size: 1em
 
 li
-  justify-content: flex-end
+  padding-top: 12px
+
+.header
+  background-color: $coral
+  padding: 7px
+
+$burger--thickness: 4px
+
+.burger
+	$width: 28px
+	display: inline-block
+  border: 0
+	background: none
+	cursor: pointer
+	border-bottom: $burger--thickness solid white
+	width: $width
+	transition: border-bottom 1s ease-in-out
+	-webkit-transition: border-bottom 1s ease-in-out
+  position: relative
+  margin-left: 500px
+
+	// Fix for extra space in Firefox
+	&::-moz-focus-inner
+		border: 0
+		padding: 0
+
+	&:before
+		content: ""
+		display: block
+		border-bottom: $burger--thickness solid white
+		width: 100%
+		margin-bottom: 5px
+		transition: transform 0.5s ease-in-out
+		-webkit-transition: -webkit-transform 0.5s ease-in-out
+    padding-left: 500px
+
+	&:after
+		content: ""
+		display: block
+		border-bottom: $burger--thickness solid white
+		width: 100%
+		margin-bottom: 5px
+		transition: transform 0.5s ease-in-out
+		-webkit-transition: -webkit-transform 0.5s ease-in-out
+
+.burger-check
+  display: none
+
+.burger-check:checked ~ .burger
+  border-bottom: $burger--thickness solid transparent
+  transition: border-bottom 0.8s ease-in-out
+  -webkit-transition: border-bottom 0.8s ease-in-out
+
+  &:before
+    transform: rotate(-405deg) translateY(1px) translateX(-3px)
+    -webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px)
+    transition: transform 0.5s ease-in-out
+    -webkit-transition: -webkit-transform 0.5s ease-in-out
+
+  &:after
+    transform: rotate(405deg) translateY(-4px) translateX(-5px)
+    -webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px)
+    transition: transform 0.5s ease-in-out
+    -webkit-transition: -webkit-transform 0.5s ease-in-out
+
+// * * * Navigation * * *
+$navigation__transition: max-height 0.5s ease-in-out
+
+.navigation
+  overflow: hidden
+  max-height: 0
+  transition: $navigation__transition
+  // position: fixed
+
+
+.burger-check:checked ~ .navigation
+  max-height: 500px
+  transition: $navigation__transition
 
 //HOME PAGE
 #home
@@ -123,10 +207,10 @@ li
 .intro
   color: white
   text-align: center
-  margin: 275px 100px 50px 100px
+  margin: 250px 100px 50px 100px
   padding: 0px 150px 0px 150px
   border: 3px double white
-  height: 470px
+  height: 62vh
   background-color: rgba($maroon, 0.50)
 
 .Headshot
@@ -134,8 +218,10 @@ li
   background-size: cover
   border-radius: 130px
   margin-top: -150px
-  height: 250px
-  width: 250px
+  height: 60vh
+  max-height: 250px
+  width: 35vw
+  max-width: 250px
   margin-bottom: -60px
   border: 2px solid white
 
@@ -181,7 +267,7 @@ li
 
 #skills
   background-color: rgba($purple, 0.90)
-  height: 250px
+  height: 80vh
   padding: 125px 125px 50px 125px
   text-align: center
   border-top: 5px double white
@@ -245,7 +331,9 @@ li
 @mixin logoSize
   height: 60px
   width: 60px
-  background-size: cover
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center
   margin-bottom: 2px
 
 @mixin aniBounce
@@ -388,8 +476,11 @@ button
 .ig:hover
   @include aniBounce
 
-
 //MEDIA QUERIES
+
+@mixin bigLogo
+  width: 20vw
+  height: 20vh
 
 @media (min-width: 850px) and (max-width: 1250px)
   .intro
@@ -398,8 +489,8 @@ button
   #portfolio
     height: 960px
   #skills
-    padding: 100px 200px 0px 200px
-    height: 350px
+    padding: 100px 50px 100px 50px
+    height: 40vh
   #contact
     display: flex
     justify-content: center
@@ -411,4 +502,103 @@ button
   .buttons
     margin: 0
 
-@media (min-width: 641px) and (max-width: 864px){}
+
+@mixin bigPortImage
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  height: 70vh
+  width: 75vw
+  border: 3px double white
+  margin-bottom: 30px
+  display: flex
+  justify-content: center
+  margin-right: 50px
+
+@media (min-width: 541px) and (max-width: 864px)
+  .Headshot
+    display: flex
+    justify-content: center
+  .html
+    @include bigLogo
+  .onePiece
+    @include bigPortImage
+  .marvel
+    @include bigPortImage
+  .oneList
+    @include bigPortImage
+  .dexter
+    @include bigPortImage
+  .BBCNews
+    @include bigPortImage
+  .bomb
+    @include bigPortImage
+
+@media (min-width: 320px) and (max-width: 864px)
+  .columns
+    display: block
+    margin: 0
+    width: 100%
+  .aboutMe
+    display: flex
+    flex-direction: column
+    justify-content: center
+  .extraCir
+    display: flex
+    justify-content: center
+    width: 100%
+  .education
+    display: flex
+    justify-content: center
+    width: 100%
+  .groups
+    display: flex
+    justify-content: center
+    width: 100%
+  h5
+    margin: 0
+    padding: 0
+  .intro
+    height: 100%
+  .row1
+    justify-content: center
+  #about
+    height: 100%
+  #skills
+    height: 100%
+  #portfolio
+    height: 100%
+  #contact
+    height: 100%
+  .skillList
+    justify-content: center
+    padding: 0px 200px 0px 200px
+  .buttonsContact
+    margin: 0
+
+@media (min-width: 320px) and (max-width: 667px)
+    h1
+      font-size: 50px
+    .intro
+      width: 100%
+      margin: 0
+      margin-top: 200px
+      padding: 0
+      padding-right: 10px
+    .Headshot
+      width: 50vw
+    .skillList
+      justify-content: center
+      padding: 0px 200px 0px 200px
+    .buttons
+      margin: 0
+      padding: 0
+    .buttonsContact
+      margin: 0
+      padding-left: 5vw
+      padding-right: 5vw
+    .contactFont
+      width: 100%
+      justify-content: center
+      margin: 0
+      padding: 10px
