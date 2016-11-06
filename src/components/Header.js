@@ -4,6 +4,7 @@ import '../styles/screen.sass'
 import { HashLink } from 'react-router-hash-scroll'
 
 class Header extends Component {
+
   render () {
     return <div className='header'>
     <nav>
@@ -15,7 +16,7 @@ class Header extends Component {
         <li><HashLink to='/#contact'>CONTACT</HashLink></li>
       </ul>
     </nav>
-    </div>
+     </div>
   }
   }
 

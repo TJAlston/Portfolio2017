@@ -6,15 +6,42 @@ class Skills extends Component {
     return <div id='skills'>
     <h3>Skills</h3>
       <div className='skillList'>
-        <div className='html' />
-        <div className='css' />
-        <div className='javascript' />
-        <div className='sass' />
-        <div className='react' />
-        <div className='ai' />
-        <div className='ps' />
-        <div className='br' />
-        <div className='id' />
+        <div className = 'marble'>
+          <div className='html' />
+          <p>HTML5</p>
+        </div>
+        <div className = 'marble'>
+          <div className='css' />
+          <p>CSS3</p>
+        </div>
+        <div className = 'marble'>
+          <div className='javascript' />
+          <p>JavaScript</p>
+        </div>
+        <div className = 'marble'>
+          <div className='sass' />
+          <p>Sass</p>
+        </div>
+        <div className = 'marble'>
+          <div className='react' />
+          <p>React</p>
+        </div>
+        <div className = 'marble'>
+          <div className='ai' />
+          <p>Illustrator</p>
+        </div>
+        <div className = 'marble'>
+          <div className='ps' />
+          <p>Photoshop</p>
+        </div>
+        <div className = 'marble'>
+          <div className='br' />
+          <p>Bridge</p>
+        </div>
+        <div className = 'marble'>
+          <div className='id' />
+          <p>InDesign</p>
+        </div>
       </div>
     </div>
   }

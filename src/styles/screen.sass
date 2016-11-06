@@ -196,48 +196,6 @@ li
   padding: 125px 125px 50px 125px
   text-align: center
 
-//MEDIA QUERIES
-
-@media (min-width: 865px) and (max-width: 1150px)
-  .intro
-    height: 530px
-    margin: 250px 0px 0px 0px
-  #portfolio
-    height: 960px
-  #skills
-    padding: 100px 200px 0px 200px
-    height: 350px
-  #contact
-    display: flex
-    justify-content: center
-    margin: 0
-  #about
-    padding: 100px 0px 0px 0px
-  .buttonsContact
-    justify-content: center
-  .buttons
-    margin: 0
-
-@media (min-width: 641px) and (max-width: 864px)
-    nav
-      height: 200px
-    ul
-      display: flex
-      flex-direction: column
-    li
-      font-size: 20px
-    .name
-      font-size: 40px
-      width: 500px
-      margin-top: -50px
-    h1
-      font-size: 50px
-      margin: 100px
-
-//figure out landscape widths
-// @media (min-width: 320px) and (max-width: 640px)
-
-
 @mixin bgImage
   background-size: cover
   background-position: center
@@ -288,6 +246,7 @@ li
   height: 60px
   width: 60px
   background-size: cover
+  margin-bottom: 2px
 
 @mixin aniBounce
   animation-name: bounce
@@ -297,6 +256,9 @@ li
 .html
   background-image: url('../images/html.png')
   @include logoSize
+.html p
+  visibility: hidden
+  opacity: 0
 .html:hover
   @include aniBounce
 
@@ -310,8 +272,7 @@ li
   background-image: url('../images/js_1.png')
   height: 80px
   width: 57px
-  background-size: contain
-  background-repeat: no-repeat
+  @include logoSize
 .javascript:hover
   @include aniBounce
 
@@ -350,6 +311,22 @@ li
   @include logoSize
 .react:hover
   @include aniBounce
+
+.marble
+  display: flex
+  flex-direction: column
+  align-items: center
+  height: 80px
+  text-transform: uppercase
+  color: white
+  font-weight: bold
+  font-size: 12px
+.marble p
+  margin: 0
+  opacity: 0
+.marble:hover p
+  color: white
+  opacity: 1
 
 .contactFont
   color: white
@@ -409,4 +386,29 @@ button
   background-image: url('../images/Instagram.png')
   @include logoSize
 .ig:hover
-@include aniBounce
+  @include aniBounce
+
+
+//MEDIA QUERIES
+
+@media (min-width: 850px) and (max-width: 1250px)
+  .intro
+    height: 530px
+    margin: 250px 0px 0px 0px
+  #portfolio
+    height: 960px
+  #skills
+    padding: 100px 200px 0px 200px
+    height: 350px
+  #contact
+    display: flex
+    justify-content: center
+    margin: 0
+  #about
+    padding: 100px 0px 0px 0px
+  .buttonsContact
+    justify-content: center
+  .buttons
+    margin: 0
+
+@media (min-width: 641px) and (max-width: 864px){}
