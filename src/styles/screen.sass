@@ -62,10 +62,11 @@ h4
   padding: 10px 0px 25px 0px
 
 h5
-  color: $orange
-  font-size: 20px
+  color: white
+  text-shadow: 1px 1px 1px $orange
+  font-size: 25px
   font-weight: bold
-  margin: 50px 0px 25px 0px
+  margin: 50px 0px 50px 0px
 
 main
   padding: 0
@@ -290,7 +291,7 @@ $navigation__transition: max-height 0.5s ease-in-out
 
 #portfolio
   background-color: rgba($coral, 0.70)
-  height: 950px
+  height: 100%
   padding: 125px 125px 50px 125px
   text-align: center
 
@@ -333,6 +334,22 @@ $navigation__transition: max-height 0.5s ease-in-out
   background-image: url('../images/bombsniffer.png')
   @include bgImage
 
+.lefemme
+  background-image: url('../images/lefemme.png')
+  @include bgImage
+  background-size: contain
+  background-color: white
+
+.bubbles
+  background-image: url('../images/bubbles.jpeg')
+  @include bgImage
+
+.tv
+  background-image: url('../images/tv.png')
+  @include bgImage
+  background-color: white
+
+
 .skillList
   display: flex
   flex-direction: row
@@ -370,8 +387,8 @@ $navigation__transition: max-height 0.5s ease-in-out
 
 .javascript
   background-image: url('../images/js_1.png')
-  height: 80px
-  width: 57px
+  height: 60px
+  width: 55px
   @include logoSize
 .javascript:hover
   @include aniBounce
@@ -391,6 +408,7 @@ $navigation__transition: max-height 0.5s ease-in-out
 .br
   background-image: url('../images/bridge3d.png')
   @include logoSize
+  margin-right: 5px
 .br:hover
   @include aniBounce
 
@@ -403,13 +421,14 @@ $navigation__transition: max-height 0.5s ease-in-out
 .sass
   background-image: url('../images/sass.png')
   @include logoSize
+  margin-right: 10px
 .sass:hover
   @include aniBounce
 
 .react
   background-image: url('../images/react.png')
   @include logoSize
-  width: 55px
+  width: 75px
 .react:hover
   @include aniBounce
 
@@ -488,6 +507,14 @@ button
   background-image: url('../images/Instagram.png')
   @include logoSize
 .ig:hover
+  @include aniBounce
+
+.wordpress
+  background-image: url('../images/wordpress.png')
+  @include logoSize
+  height: 80px
+  width: 75px
+.wordpress:hover
   @include aniBounce
 
 //MEDIA QUERIES

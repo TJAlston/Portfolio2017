@@ -5,6 +5,7 @@ class Portfolio extends Component {
   render () {
     return <div id='portfolio'>
       <h4>Portfolio</h4>
+      <h5> Web Design </h5>
       <div className='row1'>
         <a href='http://onepieceplanet.surge.sh/'>
         <div className='onePiece' /></a>
@@ -18,6 +19,12 @@ class Portfolio extends Component {
         <div className='BBCNews' /></a>
         <a href='http://bombsniffer.surge.sh/'>
         <div className='bomb' /></a>
+      </div>
+      <h5> Graphic Design </h5>
+      <div className='row1'>
+        <div className='lefemme' />
+        <div className='tv' />
+        <div className='bubbles' />
       </div>
     </div>
   }
