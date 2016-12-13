@@ -6,7 +6,7 @@ class Contact extends Component {
     return <div id='contact'>
       <div className='contactFont'>
       <h1>Contact</h1>
-      <button><a href={require('../images/TJAlston.pdf')}>Resume</a></button>
+      <button><a href={require('../images/TJAlston-WebDeveloper-2017.pdf')}>Resume</a></button>
       <p className='number'>(813) 727 - 6091</p>
       <a href='mailto:TJAlston82@yahoo.com'>TJAlston82@Yahoo.com</a>
         <div className='buttonsContact'>
