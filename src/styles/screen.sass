@@ -249,25 +249,28 @@ $navigation__transition: max-height 0.5s ease-in-out
   display: flex
   flex-direction: row
   line-height: 20px
-  margin-left: 40px
-  width: 100%
+  margin-left: 50px
+  margin-right: -50px
+  padding: 0
 
 .education
   display: flex
   flex-direction: column
-  width: 600px
+  width: 500px
   margin-right: 100px
   font-weight: lighter
 
 .extraCir
   display: flex
   flex-direction: column
-  width: 600px
+  width: 500px
+  margin-right: 50px
   font-weight: lighter
 
 .aboutMe
   display: flex
   flex-direction: column
+  width: 500px
   justify-content: center
 
 .groups
@@ -295,6 +298,9 @@ $navigation__transition: max-height 0.5s ease-in-out
   padding: 125px 125px 50px 125px
   text-align: center
 
+
+// Portfolio
+
 @mixin bgImage
   background-size: cover
   background-position: center
@@ -309,6 +315,8 @@ $navigation__transition: max-height 0.5s ease-in-out
   flex-direction: row
   flex-wrap: wrap
   justify-content: space-between
+
+// Web Design
 
 .onePiece
   background-image: url('../images/luffy.png')
@@ -334,6 +342,9 @@ $navigation__transition: max-height 0.5s ease-in-out
   background-image: url('../images/bombsniffer.png')
   @include bgImage
 
+// Graphic Design
+
+
 .lefemme
   background-image: url('../images/lefemme.png')
   @include bgImage
@@ -349,6 +360,38 @@ $navigation__transition: max-height 0.5s ease-in-out
   @include bgImage
   background-color: white
 
+@mixin modalImage
+  background-size: contain
+  background-repeat: no-repeat
+  height: 500px
+  width: 500px
+  display: flex
+  justify-content: center
+
+#lefemme
+  background-image: url('../images/lefemme.png')
+  @include modalImage
+
+#bubbles
+  background-image: url('../images/bubbles.jpeg')
+  @include modalImage
+
+#tv
+  background-image: url('../images/tv.png')
+  @include modalImage
+
+#graphic
+  padding-top: 100px
+// CSS Modal
+
+#lightbox1
+  // visibility: hidden
+  background-image: url('../images/lefemme.png')
+  @include modalImage
+
+
+
+// Skills Marbles
 
 .skillList
   display: flex
@@ -447,6 +490,8 @@ $navigation__transition: max-height 0.5s ease-in-out
 .marble:hover p
   color: white
   opacity: 1
+
+  // Contact
 
 .contactFont
   color: white

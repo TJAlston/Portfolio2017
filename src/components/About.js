@@ -9,7 +9,7 @@ class About extends Component {
       <div className='education'>
       <h5>Education</h5>
         <p> Front End Engineer Certification from The Iron Yard</p>
-        <p> Bachelor of Arts Degree from the University of North Carolina at Wilmington in Communication and Media Studies along with a minor in Theater</p>
+        <p> Bachelor of Arts Degree University of North Carolina at Wilmington in Communication and Media Studies along with a minor in Theater</p>
       </div>
       <div className='extraCir'>
       <h5>Social Activities</h5>

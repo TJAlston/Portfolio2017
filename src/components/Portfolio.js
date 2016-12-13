@@ -6,6 +6,7 @@ class Portfolio extends Component {
     return <div id='portfolio'>
       <h4>Portfolio</h4>
       <h5> Web Design </h5>
+
       <div className='row1'>
         <a href='http://onepieceplanet.surge.sh/'>
         <div className='onePiece' /></a>
@@ -20,13 +21,44 @@ class Portfolio extends Component {
         <a href='http://bombsniffer.surge.sh/'>
         <div className='bomb' /></a>
       </div>
+
+      <div id='graphic'>
       <h5> Graphic Design </h5>
       <div className='row1'>
-        <div className='lefemme' />
-        <div className='tv' />
-        <div className='bubbles' />
+
+        <div className='thumb'>
+          <a href='#lightbox1'>
+          <div className='lefemme' />
+          </a>
+        </div>
+
+        <div className='thumb'>
+          <a href='#lightbox2'>
+          <div className='tv' />
+          </a>
+        </div>
+
+        <div className='thumb'>
+          <a href='#lightbox3'>
+          <div className='bubbles'>
+          </div>
+          </a>
+        </div>
+
+        <div className='lightbox' id='lightbox1'>
+          <a href='#graphic'><div id='lefemme' /></a>
+        </div>
+
+        <div className='lightbox' id='lightbox2'>
+          <a href='#graphic'><div id='tv' /></a>
+        </div>
+
+        <div className='lightbox' id='lightbox3'>
+          <a href='#graphic'><div id='bubbles' /></a>
+        </div>
       </div>
     </div>
+  </div>
   }
 }
 
