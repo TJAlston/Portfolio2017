@@ -4,6 +4,7 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const autoprefixer = require('autoprefixer')
+const DashboardPlugin = require('webpack-dashboard/plugin')
 
 const ROOT_PATH = path.resolve(__dirname)
 const SOURCE_PATH = path.resolve(ROOT_PATH, 'src')
@@ -24,7 +25,8 @@ module.exports = {
       template: path.resolve(SOURCE_PATH, 'index.html'),
       inject: 'body',
       filename: 'index.html'
-    })
+    }),
+    new DashboardPlugin()
   ],
   module: {
     loaders: [{
@@ -35,7 +37,7 @@ module.exports = {
       test: /\.(sass|scss)$/,
       loaders: ['style', 'css', 'postcss', 'sass']
     }, {
-      test: /\.(pdf|png|jpe?g|gif|svg|ttf|eot|otf|woff|woff2)$/,
+      test: /\.(mp3.pdf|png|jpe?g|gif|svg|ttf|eot|otf|wav|woff|woff2)$/,
       loader: 'file'
     }]
   },

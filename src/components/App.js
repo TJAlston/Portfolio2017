@@ -9,9 +9,22 @@ import { HashLink } from 'react-router-hash-scroll'
 
 class App extends Component {
 
+  setHalfVolume = (event) => {
+    event.target.volume = 0.05
+  }
+
+// var audio_file = new Audio('./src/images/looperman-l-0173301-0102001-eendee-magicharp.wav')
+// audio_file.addEventListener('timeupdate', function(){
+//               var buffer = .44
+//               if(this.currentTime > this.duration - buffer){
+//                   this.currentTime = 0
+//                   this.play()
+//               }}, false);
+
   render () {
     return <div id='home'>
       <main>
+        <audio id='audiosnippetId' src='./src/images/looperman-l-0173301-0102001-eendee-magicharp.wav' controls loop onLoadedData={this.setHalfVolume} autoPlay />
         <Header />
         <div className='intro'>
           <img className='Headshot' />
