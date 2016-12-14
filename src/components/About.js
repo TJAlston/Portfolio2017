@@ -24,6 +24,7 @@ class About extends Component {
         <p>Front End Design Meetup</p>
         <p>Code Katas</p>
         <p>The Iron Yard Meetup</p>
+        <p>#YesWeCode</p>
         </div>
       </div>
     </div>
