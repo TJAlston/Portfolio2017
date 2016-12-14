@@ -4,7 +4,7 @@ import '../styles/screen.sass'
 class Skills extends Component {
   render () {
     return <div id='skills'>
-    <h4>Skills</h4>
+    <h4 id='skillsTitle'> Skills </h4>
       <div className='skillList'>
         <div className = 'marble'>
           <div className='html' />
