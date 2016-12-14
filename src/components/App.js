@@ -10,8 +10,25 @@ import { HashLink } from 'react-router-hash-scroll'
 class App extends Component {
 
   setHalfVolume = (event) => {
-    event.target.volume = 0.05
+    event.target.volume = 0.1
   }
+
+
+  musicRepeat = (event) => {
+    const audioMusic = document.getElementById('audioSnippet')
+    audioMusic.play.loop()
+
+    var height = document.innerHeight() - window.innerHeight()
+
+    window.scroll(function() {
+        audioMusic.volume = 1 - window.scrollTop() / height;
+        console.log(audioMusic.volume);
+  });
+}
+
+    // audioMusic.addEventListener('loadstart' , musicRepeat, true)
+    // console.log(audioMusic)
+
 
 // var audio_file = new Audio('./src/images/looperman-l-0173301-0102001-eendee-magicharp.wav')
 // audio_file.addEventListener('timeupdate', function(){
@@ -24,7 +41,7 @@ class App extends Component {
   render () {
     return <div id='home'>
       <main>
-        <audio id='audiosnippetId' src='./src/images/looperman-l-0173301-0102001-eendee-magicharp.wav' controls loop onLoadedData={this.setHalfVolume} autoPlay />
+        <audio id='audioSnippet' src='./src/images/looperman-l-0173301-0102001-eendee-magicharp.wav' onLoadedData={this.setHalfVolume} autoPlay />
         <Header />
         <div className='intro'>
           <img className='Headshot' />
