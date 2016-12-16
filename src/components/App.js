@@ -44,7 +44,7 @@ class App extends Component {
         <audio id='audioSnippet' src='./src/images/looperman-l-0173301-0102001-eendee-magicharp.wav' onLoadedData={this.setHalfVolume} autoPlay />
         <Header />
         <div className='intro'>
-          <img className='Headshot' />
+          <div className='Headshot' />
           <h1>Tameka J. Alston</h1>
           <h2>Front End Web Developer</h2>
           <p>I am a Front End Web Developer based in Tampa Florida that has experience in HTML5, CSS3 and JavaScript.  I also have Graphic Design skills in Adobe Illustrator, PhotoShop and InDesign.</p>
@@ -55,7 +55,7 @@ class App extends Component {
           </div>
         </div>
         <div className='links'>
-        <About />
+        {/* <About /> */}
         <Skills />
         <Portfolio />
         <Contact />

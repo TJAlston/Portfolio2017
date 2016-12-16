@@ -12,12 +12,12 @@ class Header extends Component {
       <nav id='navigation1' className='navigation'>
          <ul>
            <li><HashLink className ='name' to='/#home'>Tameka J. Alston</HashLink></li>
-           <li className='subA'><HashLink to='/#about'>ABOUT</HashLink></li>
-           <li><HashLink to='/#skills'>SKILLS</HashLink></li>
-           <li><HashLink to='/#portfolio'>PORTFOLIO</HashLink></li>
-           <li><HashLink to='/#portfolio'>- Web Development / Design</HashLink></li>
-           <li><HashLink to='/#graphic'>- Graphic Design</HashLink></li>
-           <li><HashLink to='/#contact'>CONTACT</HashLink></li>
+           {/* <li className='subA'><HashLink to='/#about'>ABOUT</HashLink></li> */}
+           <li><HashLink className ='sub' to='/#skills'>Skills</HashLink></li>
+           <li><HashLink className ='sub' to='/#portfolio'>Portfolio</HashLink></li>
+           <li><HashLink className ='sub' to='/#portfolio'>- Web Development / Design</HashLink></li>
+           <li><HashLink className ='sub' to='/#graphic'>- Graphic Design</HashLink></li>
+           <li><HashLink className ='sub' to='/#contact'>Contact</HashLink></li>
          </ul>
        </nav>
     </div>
