@@ -467,6 +467,14 @@ $navigation__transition: max-height 0.5s ease-in-out
   background-position: center
   margin-bottom: 2px
 
+@mixin logoSize2
+  height: 55px
+  width: 55px
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center
+  margin-bottom: 2px
+
 @mixin aniBounce
   animation-name: bounce
   transform-origin: center bottom
@@ -489,9 +497,8 @@ $navigation__transition: max-height 0.5s ease-in-out
 
 .javascript
   background-image: url('../images/js_1.png')
+  @include logoSize2
   height: 60px
-  width: 55px
-  @include logoSize
 .javascript:hover
   @include aniBounce
 
@@ -520,17 +527,21 @@ $navigation__transition: max-height 0.5s ease-in-out
 .id:hover
   @include aniBounce
 
+.wordpress
+  background-image: url('../images/wordpress.png')
+  @include logoSize
+.wordpress:hover
+  @include aniBounce
+
 .sass
   background-image: url('../images/sass.png')
-  @include logoSize
-  margin-right: 10px
+  @include logoSize2
 .sass:hover
   @include aniBounce
 
 .react
   background-image: url('../images/react.png')
-  @include logoSize
-  width: 75px
+  @include logoSize2
 .react:hover
   @include aniBounce
 
@@ -617,14 +628,6 @@ button
   background-image: url('../images/Instagram.png')
   @include logoSize
 .ig:hover
-  @include aniBounce
-
-.wordpress
-  background-image: url('../images/wordpress.png')
-  @include logoSize
-  height: 80px
-  width: 75px
-.wordpress:hover
   @include aniBounce
 
 //MEDIA QUERIES
@@ -740,8 +743,6 @@ button
     margin-left: 20vw
   .portId
     margin-bottom: 20px
-  .buttons
-
   //About Me
   // .columns
   //   margin: 0 100px 0 100px
@@ -767,9 +768,10 @@ button
   #skills
     height: 100%
   #portfolio
-    height: 75%
+    height: 100%
   #contact
     height: 100%
+    margin-top: 200px
   .skillList
     margin: 0
     padding: 0
