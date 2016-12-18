@@ -23,7 +23,6 @@ class Portfolio extends Component {
       </div>
 
       <div id='graphic'>
-
       <h5> Graphic Design </h5>
       <div className='row1' id='graphicRow'>
 
