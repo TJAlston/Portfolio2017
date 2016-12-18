@@ -13,7 +13,6 @@ class App extends Component {
     event.target.volume = 0.1
   }
 
-
   musicRepeat = (event) => {
     const audioMusic = document.getElementById('audioSnippet')
     audioMusic.play.loop()

@@ -103,7 +103,7 @@ a:active
 
 nav
   margin: 0
-  height: 200px
+  height: 145px
   background-color: rgba($coral, 0.50)
   align-content: center
   display: flex
@@ -118,11 +118,12 @@ nav
   position: fixed
 
 .sub
-  margin-top: -20px
   text-transform: uppercase
   font-weight: lighter
-  font-size: 19px
+  font-size: .9em
   padding: 0
+  margin-top: -12px
+
 
 
 ul
@@ -134,11 +135,10 @@ ul
   justify-content: space-between
   width: 100%
   padding-right: 25px
-  margin:
   font-size: 1em
 
 li
-  padding-top: 9px
+  padding-top: 10px
 
 .header
   background-color: $coral
@@ -637,6 +637,8 @@ button
     justify-content: center
   #graphicRow
     margin: 0px 30vw 0 20vw
+  .Headshot
+    margin-left: 33vw
 
 
 @mixin bigPortImage
@@ -663,11 +665,6 @@ button
   justify-content: center
 
 @media (min-width: 541px) and (max-width: 864px)
-  .Headshot
-    display: flex
-    justify-content: center
-  .intro
-    margin: 0
   .onePiece
     @include bigPortImage
   .marvel
@@ -712,7 +709,6 @@ button
   .buttons
     margin: 0
     margin-top: 30px
-    padding: 0 100px 0 100px
     display: flex
     flex-wrap: wrap
     justify-content: space-between
@@ -726,13 +722,12 @@ button
     padding: 0
   .Headshot
     margin-bottom: 26px
-    margin-left: 23vw
+    margin-left: 20vw
   .portId
     margin-bottom: 20px
   .buttons
     display: flex
     justify-content: center
-
   //About Me
   // .columns
   //   margin: 0 100px 0 100px
@@ -785,9 +780,9 @@ button
     margin-bottom: -100px
     padding: 10px
     height: 100%
+  h1
+    font-size: 3.5em
   h2
     font-size: 1.25em
 
 // Audio
-.audio
-  an

@@ -13,11 +13,13 @@ class Header extends Component {
          <ul>
            <li><HashLink className ='name' to='/#home'>Tameka J. Alston</HashLink></li>
            {/* <li className='subA'><HashLink to='/#about'>ABOUT</HashLink></li> */}
-           <li><HashLink className ='sub' to='/#skills'>Skills</HashLink></li>
-           <li><HashLink className ='sub' to='/#portfolio'>Portfolio</HashLink></li>
-           <li><HashLink className ='sub' to='/#portfolio'>- Web Development / Design</HashLink></li>
-           <li><HashLink className ='sub' to='/#graphic'>- Graphic Design</HashLink></li>
-           <li><HashLink className ='sub' to='/#contact'>Contact</HashLink></li>
+           <div className='sub'>
+            <li><HashLink to='/#skills'>Skills</HashLink></li>
+            <li><HashLink to='/#portfolio'>Portfolio</HashLink></li>
+            <li><HashLink to='/#portfolio'>- Web Development / Design</HashLink></li>
+            <li><HashLink to='/#graphic'>- Graphic Design</HashLink></li>
+            <li><HashLink to='/#contact'>Contact</HashLink></li>
+          </div>
          </ul>
        </nav>
     </div>
