@@ -232,6 +232,9 @@ $navigation__transition: max-height 0.5s ease-in-out
 .intro
   color: white
   text-align: left
+  display: flex
+  flex-direction: column
+  justify-content: center
   margin: 250px 100px 50px 100px
   border: 3px double white
   height: 100%
@@ -254,8 +257,10 @@ $navigation__transition: max-height 0.5s ease-in-out
   max-height: 250px
   width: 35vw
   max-width: 250px
-  margin-bottom: -40px
-  margin-left: 27vw
+  display: flex
+  justify-content: center
+  // margin-bottom: -40px
+  margin-left: 37%
 
 //ABOUT
 
@@ -312,7 +317,7 @@ $navigation__transition: max-height 0.5s ease-in-out
 #portfolio
   background-color: rgba($coral, 0.70)
   height: 100%
-  padding: 125px 125px 100px 125px
+  padding: 250px 125px 100px 125px
   text-align: center
 
 
@@ -666,8 +671,6 @@ button
     justify-content: center
   .Headshot
     margin-left: 33vw
-  // .lefemme
-  //   margin-right: 20px
   .row1
     display: flex
     flex: 1
@@ -728,6 +731,7 @@ button
     height: 100%
   #portfolio
     height: 100%
+    padding-top: 150px
   #contact
     height: 100%
   #lefemme
@@ -751,6 +755,18 @@ button
     transition: opacity 2s
     margin-top: 10%
 
+@media (min-width: 320px) and (max-width: 550px)
+  .Headshot
+    margin-left: 25%
+
+@media (min-width: 551px) and (max-width: 800px)
+  .Headshot
+    margin-left: 28%
+
+@media (min-width: 801px) and (max-width: 1000px)
+  .Headshot
+    margin-left: 33%    
+
 @media (min-width: 320px) and (max-width: 864px)
   //Introduction
   h1
@@ -771,9 +787,8 @@ button
   .intro p
     text-align: left
     padding: 0
-  .Headshot
-    margin-bottom: 26px
-    margin-left: 26vw
+  // .Headshot
+  //   margin-left: 33%
   .portId
     margin:  0 20px 20px 20px
   .row1
@@ -785,13 +800,15 @@ button
     height: 100%
   #portfolio
     height: 100%
-    padding: 0
+    padding-top: 150px
   #contact
     height: 100%
     margin-top: 200px
   #webRow
     display: flex
     justify-content: center
+  #graphic
+    margin-left: 5px
   .skillList
     margin: 0
     padding: 0
