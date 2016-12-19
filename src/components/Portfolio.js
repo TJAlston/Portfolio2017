@@ -8,10 +8,6 @@ class Portfolio extends Component {
       <h5> Web Design </h5>
 
       <div className='row1' id='webRow'>
-        <a href='http://onepieceplanet.surge.sh/'>
-        <div className='onePiece' /></a>
-        <a href='http://ctscodes.team.marvelapp.surge.sh/#/'>
-        <div className='marvel' /></a>
         <a href='http://tjonelist.surge.sh/'>
         <div className='oneList' /></a>
         <a href='http://dextermemory.surge.sh/'>
@@ -20,6 +16,10 @@ class Portfolio extends Component {
         <div className='BBCNews' /></a>
         <a href='http://bombsniffer.surge.sh/'>
         <div className='bomb' /></a>
+        <a href='http://onepieceplanet.surge.sh/'>
+        <div className='onePiece' /></a>
+        <a href='http://ctscodes.team.marvelapp.surge.sh/#/'>
+        <div className='marvel' /></a>
       </div>
 
       <div id='graphic'>

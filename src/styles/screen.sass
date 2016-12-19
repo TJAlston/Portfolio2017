@@ -77,12 +77,6 @@ h5
   color: white
   font-size: 1.75em
 
-  // text-shadow: 1px 1px 1px $orange
-  // font-size: 1.5em
-  // font-weight: bold
-  // margin: 50px 0px 50px 0px
-  // white-space: nowrap
-
 main
   padding: 0
   display: flex
@@ -328,10 +322,29 @@ $navigation__transition: max-height 0.5s ease-in-out
   background-size: cover
   background-position: center
   background-repeat: no-repeat
+  height: 270px
+  width: 420px
+  border: 3px double white
+  margin: 0 30px 30px 30px
+
+@mixin containImage
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  padding: 10px 100px 10px 20px
   height: 250px
   width: 300px
   border: 3px double white
-  margin-bottom: 30px
+  margin: 0 30px 30px 30px
+
+@mixin gdImage
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  height: 250px
+  width: 300px
+  border: 3px double white
+  margin: 0 30px 30px 0
 
 .row1
   display: flex
@@ -342,16 +355,16 @@ $navigation__transition: max-height 0.5s ease-in-out
 // Web Design
 
 .onePiece
-  background-image: url('../images/luffy.png')
+  background-image: url('../images/opsite.png')
   @include bgImage
 
 .BBCNews
   background-image: url('../images/BBCNews.png')
-  @include bgImage
+  @include containImage
 
 .dexter
   background-image: url('../images/DexterMemory.png')
-  @include bgImage
+  @include containImage
 
 .marvel
   background-image: url('../images/marvel.png')
@@ -370,17 +383,17 @@ $navigation__transition: max-height 0.5s ease-in-out
 
 .lefemme
   background-image: url('../images/lefemme.png')
-  @include bgImage
+  @include gdImage
   background-size: contain
   background-color: white
 
 .bubbles
   background-image: url('../images/bubbles.jpeg')
-  @include bgImage
+  @include gdImage
 
 .tv
   background-image: url('../images/tv.png')
-  @include bgImage
+  @include gdImage
   background-color: white
 
 @mixin modalImage
@@ -410,7 +423,8 @@ $navigation__transition: max-height 0.5s ease-in-out
   flex-direction: column
 
 #webRow
-  margin-bottom: -70px
+  display: flex
+  justify-content: space-between
 
 #graphicRow
   padding-bottom: 75px
@@ -462,14 +476,6 @@ $navigation__transition: max-height 0.5s ease-in-out
 @mixin logoSize
   height: 60px
   width: 60px
-  background-size: contain
-  background-repeat: no-repeat
-  background-position: center
-  margin-bottom: 2px
-
-@mixin logoSize2
-  height: 55px
-  width: 55px
   background-size: contain
   background-repeat: no-repeat
   background-position: center
@@ -633,20 +639,20 @@ button
   @include aniBounce
 
 //MEDIA QUERIES
-@media (min-width: 850px) and (max-width: 1250px)
+@media (min-width: 865px) and (max-width: 1250px)
   .intro
     height: 530px
-    margin: 150px 0px 0px 0px
+    margin: 200px 0px 0px 0px
   #skills
     padding: 100px 50px 100px 50px
   .columns
     display: flex
     justify-content: center
     flex-wrap: wrap
-  .extraCir
-    max-width: 200px
-  .education
-    max-width: 200px
+  // .extraCir
+  //   max-width: 200px
+  // .education
+  //   max-width: 200px
   #contact
     display: flex
     justify-content: center
@@ -656,10 +662,18 @@ button
   .buttonsContact
     justify-content: center
   #graphicRow
-    margin: 0px 30vw 0 20vw
+    display: flex
+    justify-content: center
   .Headshot
     margin-left: 33vw
-
+  // .lefemme
+  //   margin-right: 20px
+  .row1
+    display: flex
+    flex: 1
+  #webRow
+    display: flex
+    justify-content: center
 
 @mixin bigPortImage
   background-size: cover
@@ -667,6 +681,17 @@ button
   background-repeat: no-repeat
   height: 70vh
   width: 75vw
+  border: 3px double white
+  margin-bottom: 30px
+  display: flex
+  justify-content: center
+
+@mixin containPortImage
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  height: 70vh
+  width: 59vw
   border: 3px double white
   margin-bottom: 30px
   display: flex
@@ -692,21 +717,23 @@ button
   .oneList
     @include bigPortImage
   .dexter
-    @include bigPortImage
+    @include containPortImage
   .BBCNews
-    @include bigPortImage
+    @include containPortImage
   .bomb
     @include bigPortImage
-    #about
-      height: 100%
-    #skills
-      height: 100%
-    #portfolio
-      height: 100%
-    #contact
-      height: 100%
+  #about
+    height: 100%
+  #skills
+    height: 100%
+  #portfolio
+    height: 100%
+  #contact
+    height: 100%
   #lefemme
     @include heightPortImage
+  .lefemme
+    margin-right: 20px
   #tv
     @include bigPortImage
     border: none
@@ -726,12 +753,16 @@ button
 
 @media (min-width: 320px) and (max-width: 864px)
   //Introduction
+  h1
+    font-size: 3.5em
+  h2
+    font-size: 1.25em
   .buttons
     margin: 0
     margin-top: 30px
     display: flex
     flex-wrap: wrap
-    justify-content: space-between
+    justify-content: center
   .intro
     margin: 0
     margin-top: 30px
@@ -742,26 +773,9 @@ button
     padding: 0
   .Headshot
     margin-bottom: 26px
-    margin-left: 20vw
+    margin-left: 26vw
   .portId
-    margin-bottom: 20px
-  //About Me
-  // .columns
-  //   margin: 0 100px 0 100px
-  .aboutMe
-    display: flex
-    flex-wrap: wrap
-    flex-direction: column
-    justify-content: center
-  .extraCir
-    display: flex
-    justify-content: center
-  .education
-    display: flex
-    justify-content: center
-  .groups
-    display: flex
-    justify-content: center
+    margin:  0 20px 20px 20px
   .row1
     display: flex
     justify-content: center
@@ -771,9 +785,13 @@ button
     height: 100%
   #portfolio
     height: 100%
+    padding: 0
   #contact
     height: 100%
     margin-top: 200px
+  #webRow
+    display: flex
+    justify-content: center
   .skillList
     margin: 0
     padding: 0
@@ -785,9 +803,6 @@ button
     padding-left: 5vw
     padding-right: 5vw
     padding-top: 50px
-  button
-    margin-left: 12vw
-    margin-right: 12vw
   .contactFont
     justify-content: center
     width: 100%
@@ -798,9 +813,31 @@ button
     margin-bottom: -100px
     padding: 10px
     height: 100%
-  h1
-    font-size: 3.5em
-  h2
-    font-size: 1.25em
+  #lightbox1
+    visibility: hidden
+  #lightbox2
+    visibility: hidden
+  #lightbox3
+    visibility: hidden
+
+
+  //About Me
+  // .columns
+  //   margin: 0 100px 0 100px
+  // .aboutMe
+  //   display: flex
+  //   flex-wrap: wrap
+  //   flex-direction: column
+  //   justify-content: center
+  // .extraCir
+  //   display: flex
+  //   justify-content: center
+  // .education
+  //   display: flex
+  //   justify-content: center
+  // .groups
+  //   display: flex
+  //   justify-content: center
+
 
 // Audio
