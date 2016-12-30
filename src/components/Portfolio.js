@@ -8,17 +8,17 @@ class Portfolio extends Component {
       <h5> Web Design </h5>
 
       <div className='row1' id='webRow'>
-        <a href='http://tjonelist.surge.sh/'>
+        <a href='https://github.com/TJAlston/one-list'>
         <div className='oneList' /></a>
-        <a href='http://dextermemory.surge.sh/'>
+        <a href='https://github.com/TJAlston/DexterMemory'>
         <div className='dexter' /></a>
-        <a href='http://newswebsite1.surge.sh/'>
+        <a href='https://github.com/TJAlston/BBCNews'>
         <div className='BBCNews' /></a>
-        <a href='http://bombsniffer.surge.sh/'>
+        <a href='https://github.com/TJAlston/bomb-sniffer'>
         <div className='bomb' /></a>
-        <a href='http://onepieceplanet.surge.sh/'>
+        <a href='https://github.com/TJAlston/OnePiecePlanet'>
         <div className='onePiece' /></a>
-        <a href='http://ctscodes.team.marvelapp.surge.sh/#/'>
+        <a href='https://github.com/ctscodes/MarvelApp-'>
         <div className='marvel' /></a>
       </div>
 
